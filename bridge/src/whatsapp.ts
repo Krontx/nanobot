@@ -120,9 +120,6 @@ export class WhatsAppClient {
           continue;
         }
 
-        if (msg.key.fromMe) {
-        }
-
         // Skip status updates
         if (msg.key.remoteJid === 'status@broadcast') continue;
 
@@ -150,9 +147,6 @@ export class WhatsAppClient {
         if (this.sentMessageIds.has(msgId)) {
           this.sentMessageIds.delete(msgId);
           continue;
-        }
-        
-        if (msg.key.fromMe) {
         }
         
         if (msg.key.remoteJid === 'status@broadcast') continue;
